@@ -77,7 +77,7 @@ export default function Home() {
               <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full blur-2xl opacity-50 animate-pulse"></div>
                 <img 
-                  src="https://media.licdn.com/dms/image/v2/D4D35AQG4Nmn9zZH3XQ/profile-framedphoto-shrink_200_200/B4DZl8BkpjJgAY-/0/1758722411541?e=1764943200&v=beta&t=agoLAWHDG5QbfpyzZ5-4sAV_X-Hm90UvyXecM-t6xmE" 
+                  src="../../media/sandip-ganava.jpg" 
                   alt="Sandip Ganava" 
                   className="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-2xl z-10"
                 />
@@ -135,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* Clients / Brands Section */}
-      <section className="py-10 bg-gray-50 dark:bg-slate-900 overflow-hidden">
+      {/* <section className="py-10 bg-gray-50 dark:bg-slate-900 overflow-hidden">
         <div className="container mx-auto px-4 mb-6">
           <p className="text-center text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest">Trusted By</p>
         </div>
@@ -157,7 +157,7 @@ export default function Home() {
             100% { transform: translateX(-50%); }
           }
         `}</style>
-      </section>
+      </section> */}
 
       {/* Featured Projects */}
       <section className="py-20 bg-white dark:bg-slate-950">

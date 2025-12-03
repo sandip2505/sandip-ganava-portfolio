@@ -278,7 +278,7 @@ export const Footer: React.FC = () => {
           <div className="text-sm text-gray-500 dark:text-gray-400 flex flex-col md:flex-row items-center gap-2">
             <span>© {new Date().getFullYear()} Sandip Ganava. All rights reserved.</span>
             <span className="hidden md:inline text-gray-300 dark:text-gray-700">•</span>
-            <span className="flex items-center gap-1">Made with <Heart size={12} className="text-red-500 fill-red-500" /> and React</span>
+            <span className="flex items-center gap-1">Made with <Heart size={12} className="text-red-500 fill-red-500" /> and Node JS</span>
           </div>
           
           <button

@@ -6,11 +6,11 @@ import {
 } from 'lucide-react';
 
 export const SOCIAL_LINKS = {
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
-  twitter: "https://twitter.com",
-  email: "sandip.ganava@email.com",
-  phone: "+91 98765 43210"
+  github: "https://github.com/sandip2505",
+  linkedin: "https://linkedin.com/in/sandip-ganava",
+  twitter: "https://twitter.com/sandip_ganava",
+  email: "sandipganava2357@email.com",
+  phone: "+91 79844 55302"
 };
 
 export const PROJECTS: Project[] = [
@@ -333,7 +333,9 @@ export const SKILLS: Skill[] = [
   { name: "VS Code", level: 100, category: "Tools" },
   { name: "Postman", level: 95, category: "Tools" },
   { name: "Figma", level: 80, category: "Tools" },
-  { name: "Docker", level: 70, category: "Tools" },
+  { name: "Monday", level: 50, category: "Tools" },
+  { name: "Trello", level: 50, category: "Tools" },
+  { name: "Docker", level: 50, category: "Tools" },
 
   // Additional
   { name: "Strapi CMS", level: 75, category: "Additional" },
@@ -487,10 +489,17 @@ export const TIMELINE: TimelineItem[] = [
     type: 'work'
   },
   {
-    year: "2016 - 2020",
-    title: "B.Tech in Computer Engineering",
+    year: "2019 - 2022",
+    title: "Diploma in Information Technology",
     company: "Gujarat Technological University",
     description: "Graduated with Distinction. Focused on Software Engineering and Data Structures.",
+    type: 'education'
+  },
+  {
+    year: "2023 - 2026",
+    title: "B.E in Information Technology",
+    company: "Monark University",
+    description: "Pursuing Bachelor's degree with a focus on Full Stack Development and Cloud Computing.",
     type: 'education'
   }
 ];

@@ -179,40 +179,101 @@ export default function Skills() {
         <section className="py-16 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-800">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center">Proficiency Breakdown</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-               <div className="p-6">
-                  <div className="h-32 flex items-end justify-center gap-4 mb-4">
-                    <div className="w-12 bg-primary-200 dark:bg-primary-900/50 h-[80%] rounded-t-lg relative group">
-                        <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">80%</span>
-                    </div>
-                    <div className="w-12 bg-primary-400 dark:bg-primary-700 h-[95%] rounded-t-lg relative group">
-                        <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">95%</span>
-                    </div>
-                    <div className="w-12 bg-primary-600 dark:bg-primary-500 h-[90%] rounded-t-lg relative group">
-                        <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">90%</span>
-                    </div>
-                  </div>
-                  <h3 className="font-bold">Stack Balance</h3>
-                  <p className="text-sm text-gray-500">Design / Frontend / Backend</p>
-               </div>
-               
-               <div className="p-6">
-                 <div className="relative w-32 h-32 mx-auto rounded-full border-8 border-primary-100 dark:border-slate-800 flex items-center justify-center mb-4">
-                    <span className="text-2xl font-bold text-primary-600">3+</span>
-                 </div>
-                 <h3 className="font-bold">Years Experience</h3>
-                 <p className="text-sm text-gray-500">Consistent Growth</p>
-               </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+              {/* Learning Timeline */}
+              <div className="md:col-span-1 bg-white dark:bg-slate-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700">
+              <h3 className="text-xl font-bold mb-4">Learning Journey</h3>
+              <p className="text-sm text-gray-500 mb-6">Milestones & what I focused on during each phase.</p>
 
-               <div className="p-6">
-                 <div className="flex justify-center gap-2 mb-4">
-                   <Terminal size={32} className="text-gray-400" />
-                   <Code2 size={32} className="text-primary-600" />
-                   <Globe size={32} className="text-gray-400" />
-                 </div>
-                 <h3 className="font-bold">Versatility</h3>
-                 <p className="text-sm text-gray-500">Mobile, Web & CMS</p>
-               </div>
+              <div className="relative pl-6">
+                <div className="absolute left-3 top-2 bottom-2 w-[2px] bg-gray-200 dark:bg-slate-700"></div>
+
+                {[
+                { year: '2024', title: 'Advanced React Patterns', desc: 'Hooks, Suspense, performance tuning and state machines', icon: Code2 },
+                { year: '2022', title: 'Cloud & Deployment', desc: 'Containerization, CI/CD, infra as code', icon: Server },
+                { year: '2020', title: 'Full-Stack Focus', desc: 'APIs, Database modeling, Authentication', icon: Database },
+                { year: '2018', title: 'Mobile & Responsive', desc: 'Progressive Web Apps and React Native basics', icon: Smartphone }
+                ].map((stop, i) => {
+                const Icon = stop.icon as React.ElementType;
+                return (
+                  <div key={i} className="relative mb-6">
+                  <div className="absolute -left-1.5 top-0 bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 w-6 h-6 rounded-full flex items-center justify-center">
+                    <Icon size={14} className="text-primary-600" />
+                  </div>
+                  <div className="pl-6">
+                    <div className="flex items-baseline justify-between">
+                    <h4 className="font-semibold">{stop.title}</h4>
+                    <span className="text-xs text-gray-400">{stop.year}</span>
+                    </div>
+                    <p className="text-sm text-gray-500 mt-1">{stop.desc}</p>
+                  </div>
+                  </div>
+                );
+                })}
+              </div>
+              </div>
+
+              {/* Visual Focus (circles for current learning) */}
+              <div className="md:col-span-1 bg-white dark:bg-slate-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700 flex flex-col items-center">
+              <h3 className="text-xl font-bold mb-4">Current Focus</h3>
+              <p className="text-sm text-gray-500 mb-6 text-center">Where I invest most of my learning time right now.</p>
+
+              <div className="grid grid-cols-3 gap-4 w-full">
+                {[
+                { label: 'TypeScript', pct: 85, color: '#0ea5a4' },
+                { label: 'Cloud', pct: 70, color: '#6366f1' },
+                { label: 'Design', pct: 60, color: '#f59e0b' }
+                ].map((s, i) => (
+                <div key={i} className="flex flex-col items-center">
+                  <div
+                  aria-hidden
+                  className="w-24 h-24 rounded-full flex items-center justify-center shadow-sm"
+                  style={{
+                    background: `conic-gradient(${s.color} ${s.pct}%, rgba(0,0,0,0.06) ${s.pct}% 100%)`
+                  }}
+                  >
+                  <div className="w-16 h-16 rounded-full bg-white dark:bg-slate-900 flex items-center justify-center">
+                    <span className="text-sm font-bold" style={{ color: s.color }}>{s.pct}%</span>
+                  </div>
+                  </div>
+                  <div className="mt-3 text-sm font-medium text-gray-700 dark:text-gray-200">{s.label}</div>
+                </div>
+                ))}
+              </div>
+
+              <p className="text-xs text-gray-400 mt-4 text-center">Percent indicates current depth of hands-on practice.</p>
+              </div>
+
+              {/* Skills Comparison Bars */}
+              <div className="md:col-span-1 bg-white dark:bg-slate-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700">
+              <h3 className="text-xl font-bold mb-4">Skills Comparison</h3>
+              <p className="text-sm text-gray-500 mb-6">Relative proficiency across different stacks.</p>
+
+              {[
+                { name: 'Backend', pct: 90, color: 'bg-gradient-to-r from-emerald-400 to-emerald-600' },
+                { name: 'WordPress', pct: 95, color: 'bg-gradient-to-r from-yellow-400 to-yellow-600' },
+                { name: 'Frontend', pct: 70, color: 'bg-gradient-to-r from-primary-500 to-primary-700' },
+                { name: 'DevOps', pct: 72, color: 'bg-gradient-to-r from-sky-400 to-sky-600' },
+                { name: 'Database', pct: 80, color: 'bg-gradient-to-r from-violet-400 to-violet-600' },
+              ].map((s, i) => (
+                <div key={i} className="mb-4">
+                <div className="flex justify-between mb-1">
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-200">{s.name}</span>
+                  <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">{s.pct}%</span>
+                </div>
+                <div className="w-full bg-gray-100 dark:bg-slate-700 rounded-full h-3 overflow-hidden">
+                  <div
+                  className={`${s.color} h-3 rounded-full shadow-sm`}
+                  style={{ width: `${s.pct}%` }}
+                  />
+                </div>
+                </div>
+              ))}
+
+              <div className="mt-6 text-xs text-gray-400">
+                <strong>Note:</strong> Bars are relative and meant to show strengths across domains rather than absolute metrics.
+              </div>
+              </div>
             </div>
           </div>
         </section>

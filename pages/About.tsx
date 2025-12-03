@@ -64,7 +64,7 @@ export default function About() {
                    <div className="absolute inset-0 bg-gradient-to-tr from-primary-500 to-secondary-500 rounded-3xl rotate-6 opacity-20 blur-2xl"></div>
                    <div className="absolute inset-0 bg-gray-200 dark:bg-slate-800 rounded-3xl -rotate-6 transform scale-95 border border-gray-100 dark:border-gray-700"></div>
                    <img 
-                     src="https://media.licdn.com/dms/image/v2/D4D35AQG4Nmn9zZH3XQ/profile-framedphoto-shrink_200_200/B4DZl8BkpjJgAY-/0/1758722411541?e=1764943200&v=beta&t=agoLAWHDG5QbfpyzZ5-4sAV_X-Hm90UvyXecM-t6xmE" 
+                     src="../../media/sandy.png" 
                      alt="Sandip Ganava" 
                      className="relative w-full h-full object-cover rounded-3xl shadow-2xl z-10 border-4 border-white dark:border-slate-800"
                    />
