@@ -8,29 +8,29 @@ import {
 export const SOCIAL_LINKS = {
   github: "https://github.com/sandip2505",
   linkedin: "https://linkedin.com/in/sandip-ganava",
-  twitter: "https://twitter.com/sandip_ganava",
+  twitter: "https://wa.me/+917984455302?text=Hi%20Sandip,%20I%20checked%20your%20portfolio.%20I%20want%20to%20build%20a%20website%20and%20need%20your%20help.%20Please%20contact%20me.",
   email: "sandipganava2357@email.com",
   phone: "+91 79844 55302"
 };
 
 export const PROJECTS: Project[] = [
   {
-    id: "ai-content-studio",
-    title: "AI Content Studio",
-    subtitle: "Generative AI Marketing Tool",
+    id: "ems-emplaoyee-management-system",
+    title: "Employee Management System",
+    subtitle: "HR & Attendance Tool",
     category: "Web Apps",
-    description: "A SaaS platform leveraging OpenAI to help marketers generate high-converting copy, blog posts, and social media captions.",
-    longDescription: "AI Content Studio is a modern SaaS application built with Next.js 14. It integrates OpenAI's GPT-4 API to provide users with specialized templates for various content needs. The platform features subscription management via Stripe, user authentication, and a responsive, dark-mode enabled UI designed for productivity.",
-    techStack: ["Next.js", "TypeScript", "OpenAI API", "Stripe", "Tailwind CSS"],
+    description: "Comprehensive web application for employee CRUD operations and attendance tracking.",
+    longDescription: "Employee Management System is a modern web application built with React.js 18. It provides a robust platform for HR and management to streamline employee data, attendance, leave requests, and performance evaluation. The system is designed with a focus on security and role-based access control, ensuring that sensitive information is protected.",
+    techStack: ["React.js", "TypeScript", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
     features: [
-      "50+ AI Writing Templates",
-      "Multi-language Support",
-      "Rich Text Editor & Export",
-      "Subscription & Credit System",
+      "Employee CRUD Operations",
+      "Attendance Tracking",
+      "Leave Management",
+      "Performance Evaluation",
       "Project Organization"
     ],
-    image: "https://picsum.photos/800/600?random=5",
-    gallery: ["https://picsum.photos/800/600?random=51", "https://picsum.photos/800/600?random=52"],
+    image: "/media/ems1.jpg",
+    gallery: ["/media/ems1.jpg", "/media/ems2.jpg","/media/ems3.jpg","/media/ems4.jpg"],
     challenges: [
       { title: "Prompt Engineering", description: "Fine-tuning system prompts to ensure consistent, high-quality output across different templates." },
       { title: "Rate Limiting", description: "Handling API rate limits gracefully and implementing a robust queue system for heavy loads." }
@@ -58,8 +58,8 @@ export const PROJECTS: Project[] = [
       "Village and Business listings",
       "Push Notifications for events"
     ],
-    image: "https://picsum.photos/800/600?random=1",
-    gallery: ["https://picsum.photos/800/600?random=11", "https://picsum.photos/800/600?random=12", "https://picsum.photos/800/600?random=13"],
+    image: "/media/panchal1.jpg",
+    gallery: ["/media/panchal1.jpg", "/media/panchal2.jpg", "/media/panchal3.jpg", "/media/panchal4.jpg"],
     challenges: [
       { title: "Offline Availability", description: "Ensuring directory data was accessible without active internet." },
       { title: "Large Data Handling", description: "Optimizing list rendering for over 10,000 member records." }
@@ -85,8 +85,8 @@ export const PROJECTS: Project[] = [
       "Property Valuation Tool",
       "Advanced Filtering (Price, Amenities, Location)"
     ],
-    image: "https://picsum.photos/800/600?random=7",
-    gallery: ["https://picsum.photos/800/600?random=71", "https://picsum.photos/800/600?random=72"],
+    image: "/media/estate1.jpg",
+    gallery: ["/media/estate1.jpg", "/media/estate2.jpg", "/media/estate3.jpg", "/media/estate4.jpg"],
     challenges: [
       { title: "Geospatial Search", description: "Optimizing MongoDB queries for location-based searching within specific radii." },
       { title: "Image Optimization", description: "Handling uploads of high-resolution property images and optimizing them for fast loading." }
@@ -113,8 +113,8 @@ export const PROJECTS: Project[] = [
       "Document Repository",
       "Automated Salary Slip Generation"
     ],
-    image: "https://picsum.photos/800/600?random=2",
-    gallery: ["https://picsum.photos/800/600?random=21", "https://picsum.photos/800/600?random=22"],
+    image: "/media/ems1.jpg",
+    gallery: ["/media/ems1.jpg", "/media/ems2.jpg", "/media/ems3.jpg", "/media/ems4.jpg"],
     challenges: [
       { title: "Security", description: "Implementing JWT and secure HTTP-only cookies for session management." },
       { title: "Complex Queries", description: "Aggregating attendance data for analytical reports." }
@@ -141,8 +141,8 @@ export const PROJECTS: Project[] = [
       "Push Notifications",
       "Secure Wallet System"
     ],
-    image: "https://picsum.photos/800/600?random=8",
-    gallery: ["https://picsum.photos/800/600?random=81", "https://picsum.photos/800/600?random=82"],
+    image: "/media/food_delivery1.jpg",
+    gallery: ["/media/food_delivery1.jpg", "/media/food_delivery2.jpg", "/media/food_delivery3.jpg", "/media/food_delivery4.jpg"],
     challenges: [
       { title: "Real-time Location", description: "Optimizing battery usage while maintaining accurate GPS tracking for delivery drivers." },
       { title: "Order State Management", description: "Handling complex order states (Accepted, Preparing, Picked Up, Delivered) across multiple users." }
@@ -170,8 +170,8 @@ export const PROJECTS: Project[] = [
       "Certificate Generation",
       "Discussion Forums"
     ],
-    image: "https://picsum.photos/800/600?random=9",
-    gallery: ["https://picsum.photos/800/600?random=91", "https://picsum.photos/800/600?random=92"],
+    image: "/media/lms1.jpg",
+    gallery: ["/media/lms1.jpg", "/media/lms2.jpg", "/media/lms3.jpg", "/media/lms4.jpg"],
     challenges: [
       { title: "Video Content Delivery", description: "Implementing adaptive bitrate streaming for smooth video playback across different bandwidths." },
       { title: "Database Schema", description: "Designing a flexible schema to handle various course structures and user roles." }
@@ -199,8 +199,8 @@ export const PROJECTS: Project[] = [
       "Apple Health & Google Fit Integration",
       "Offline Mode"
     ],
-    image: "https://picsum.photos/800/600?random=6",
-    gallery: ["https://picsum.photos/800/600?random=61"],
+    image: "/media/fitness1.jpg",
+    gallery: ["/media/fitness1.jpg", "/media/fitness2.jpg", "/media/fitness3.jpg", "/media/fitness4.jpg"],
     challenges: [
       { title: "Data Synchronization", description: "Implementing conflict resolution strategies for offline data syncing." },
       { title: "Performance", description: "Rendering complex interactive charts smoothly on older devices." }
@@ -227,8 +227,8 @@ export const PROJECTS: Project[] = [
       "Integrated Shipping Calculator",
       "SEO Optimized Schema Markup"
     ],
-    image: "https://picsum.photos/800/600?random=3",
-    gallery: ["https://picsum.photos/800/600?random=31"],
+    image: "/media/shop1.jpg",
+    gallery: ["/media/shop1.jpg", "/media/shop2.jpg", "/media/shop3.jpg", "/media/shop4.jpg"],
     challenges: [
       { title: "Performance", description: "Achieving <2s load time despite high-resolution imagery." }
     ],
@@ -252,8 +252,8 @@ export const PROJECTS: Project[] = [
       "Budgeting Goals & Alerts",
       "Dark/Light Theme Support"
     ],
-    image: "https://picsum.photos/800/600?random=10",
-    gallery: ["https://picsum.photos/800/600?random=101"],
+    image: "/media/financial1.jpg",
+    gallery: ["/media/financial1.jpg", "/media/financial2.jpg", "/media/financial3.jpg", "/media/financial4.jpg"],
     challenges: [
       { title: "Data Visualization", description: "Rendering large datasets efficiently without blocking the main thread." },
       { title: "API Security", description: "Securely handling sensitive financial tokens and user data encryption." }
@@ -280,8 +280,8 @@ export const PROJECTS: Project[] = [
       "Sponsored Business Listings",
       "Automated Invoicing"
     ],
-    image: "https://picsum.photos/800/600?random=4",
-    gallery: ["https://picsum.photos/800/600?random=41"],
+    image: "/media/travel1.jpg",
+    gallery: ["/media/travel1.jpg", "/media/travel2.jpg", "/media/travel3.jpg", "/media/travel4.jpg"],
     challenges: [
       { title: "Plugin Conflict", description: "Resolving conflicts between multiple heavy-duty booking plugins." }
     ],
@@ -467,24 +467,24 @@ export const SERVICES: Service[] = [
 ];
 
 export const TIMELINE: TimelineItem[] = [
+  // {
+  //   year: "2023 - Present",
+  //   title: "Senior Full Stack Developer",
+  //   company: "Codecrewinfotech Pvt Ltd.",
+  //   description: "Leading a team of 5 developers, architecting scalable MERN solutions and overseeing mobile app deployment.",
+  //   type: 'work'
+  // },
   {
     year: "2023 - Present",
-    title: "Senior Full Stack Developer",
-    company: "Tech Solutions Inc.",
-    description: "Leading a team of 5 developers, architecting scalable MERN solutions and overseeing mobile app deployment.",
-    type: 'work'
-  },
-  {
-    year: "2021 - 2023",
     title: "Full Stack Developer",
-    company: "Creative Web Agency",
+    company: "Codecrewinfotech Pvt Ltd.",
     description: "Developed 20+ WordPress custom themes and successfully launched 3 major React Native applications.",
     type: 'work'
   },
   {
-    year: "2020 - 2021",
+    year: "2022 - 2023",
     title: "Junior Web Developer",
-    company: "StartUp Hub",
+    company: "Codecrewinfotech Pvt Ltd.",
     description: "Collaborated on frontend development using React.js and maintained legacy PHP systems.",
     type: 'work'
   },
@@ -507,7 +507,7 @@ export const TIMELINE: TimelineItem[] = [
 export const CERTIFICATIONS: Certification[] = [
   {
     name: "Meta Front-End Developer Professional Certificate",
-    issuer: "Coursera / Meta",
+    issuer: "Coursera",
     date: "2023"
   },
   {
@@ -533,7 +533,8 @@ export const HOBBIES: Hobby[] = [
   { name: "Photography", description: "Capturing landscapes and urban life.", icon: Camera },
   { name: "Tech Blogging", description: "Sharing knowledge on Dev.to and Medium.", icon: Book },
   { name: "Gaming", description: "Strategic RPGs and FPS games.", icon: Gamepad },
-  { name: "Music", description: "Listening to Lo-Fi while coding.", icon: Music }
+  { name: "Music", description: "Listening to Lo-Fi while coding.", icon: Music },
+  { name: "Reading", description: "Exploring tech blogs and novels.", icon: Book }
 ];
 
 export const BLOGS: BlogPost[] = [
@@ -544,7 +545,7 @@ export const BLOGS: BlogPost[] = [
     date: "May 15, 2024",
     category: "React",
     readTime: "5 min read",
-    image: "https://picsum.photos/800/400?random=101",
+    image: "/media/blog1.jpg",
     content: `
       <h2>Introduction</h2>
       <p>React is fast by default, but as applications grow, performance bottlenecks can appear. In this article, we'll explore 10 actionable techniques to optimize your React applications for speed and efficiency.</p>
@@ -588,7 +589,7 @@ function MyComponent() {
     date: "April 22, 2024",
     category: "Backend",
     readTime: "8 min read",
-    image: "https://picsum.photos/800/400?random=102",
+    image: "/media/blog2.jpg",
     content: `
       <h2>Why Structure Matters?</h2>
       <p>When building a backend service, the file structure determines how easy it is to maintain, test, and scale the application. A "spaghetti code" structure can lead to technical debt very quickly.</p>
@@ -628,7 +629,7 @@ exports.getUser = async (req, res, next) => {
     date: "March 10, 2024",
     category: "WordPress",
     readTime: "6 min read",
-    image: "https://picsum.photos/800/400?random=103",
+    image: "/media/blog3.jpg",
     content: `
       <h2>Getting Started with Plugin Development</h2>
       <p>WordPress powers over 40% of the web. Creating custom plugins allows you to extend its functionality to meet specific business needs.</p>
@@ -667,7 +668,7 @@ echo esc_html( $title );
     date: "Feb 15, 2024",
     category: "Frontend",
     readTime: "7 min read",
-    image: "https://picsum.photos/800/400?random=104",
+    image: "/media/blog4.jpg",
     content: `
       <h2>What are Generics?</h2>
       <p>Generics allow you to define a component or function that can work with a variety of types rather than a single one. This allows users to consume these components and use their own types.</p>
@@ -749,7 +750,7 @@ export const FAQS = [
 ];
 
 export const CLIENTS = [
-  { name: "TechVentures", logo: "TV" },
+  { name: "Pixo Story", logo: "PS" },
   { name: "Global Travel", logo: "GT" },
   { name: "InnovateX", logo: "IX" },
   { name: "Alpha Corp", logo: "AC" },
