@@ -29,8 +29,8 @@ export const PROJECTS: Project[] = [
       "Performance Evaluation",
       "Project Organization"
     ],
-    image: "/media/ems1.jpg",
-    gallery: ["/media/ems1.jpg", "/media/ems2.jpg","/media/ems3.jpg","/media/ems4.jpg"],
+    image: "https://image2url.com/images/1766049896515-73fded27-b1fe-4f76-9749-a1738604796b.jpg",
+    gallery: ["https://image2url.com/images/1766049897965-497837af-2c32-4f7f-865d-f678383c65e2.jpg", "https://image2url.com/images/1766049899367-4d267577-6ef5-4f37-a47c-c79fc77d62fa.jpg","https://image2url.com/images/1766049900359-e21b790b-241f-4a55-9230-754b50ecbdc7.jpg","https://image2url.com/images/1766049900359-e21b790b-241f-4a55-9230-754b50ecbdc7.jpg"],
     challenges: [
       { title: "Prompt Engineering", description: "Fine-tuning system prompts to ensure consistent, high-quality output across different templates." },
       { title: "Rate Limiting", description: "Handling API rate limits gracefully and implementing a robust queue system for heavy loads." }
@@ -58,8 +58,8 @@ export const PROJECTS: Project[] = [
       "Village and Business listings",
       "Push Notifications for events"
     ],
-    image: "/media/panchal1.jpg",
-    gallery: ["/media/panchal1.jpg", "/media/panchal2.jpg", "/media/panchal3.jpg", "/media/panchal4.jpg"],
+    image: "https://image2url.com/images/1766049930894-4d60a672-5ca2-4b44-b075-637f7cca315e.jpg",
+    gallery: ["https://image2url.com/images/1766049930894-4d60a672-5ca2-4b44-b075-637f7cca315e.jpg", "https://image2url.com/images/1766049932202-9fe1ab45-7f60-406a-9096-57ebab229fb2.jpg", "https://image2url.com/images/1766049933388-11880306-f34d-442d-be07-d30370de979b.jpg", "https://image2url.com/images/1766049934617-d2151d04-04ea-4f70-8c4f-22ac3fc32a19.jpg"],
     challenges: [
       { title: "Offline Availability", description: "Ensuring directory data was accessible without active internet." },
       { title: "Large Data Handling", description: "Optimizing list rendering for over 10,000 member records." }
@@ -85,8 +85,8 @@ export const PROJECTS: Project[] = [
       "Property Valuation Tool",
       "Advanced Filtering (Price, Amenities, Location)"
     ],
-    image: "/media/estate1.jpg",
-    gallery: ["/media/estate1.jpg", "/media/estate2.jpg", "/media/estate3.jpg", "/media/estate4.jpg"],
+    image: "https://image2url.com/images/1766049901653-03a8e855-a33c-4811-8e1d-868eddb1621c.jpg",
+    gallery: ["https://image2url.com/images/1766049901653-03a8e855-a33c-4811-8e1d-868eddb1621c.jpg", "https://image2url.com/images/1766049903135-4230d09f-242f-4d4d-b3f9-571688743637.jpg", "https://image2url.com/images/1766049904500-70de630f-fce0-43ef-a651-03cc318359ea.jpg", "https://image2url.com/images/1766049905884-aae44a4a-9afe-40aa-ae49-c6d176f6ef96.jpg"],
     challenges: [
       { title: "Geospatial Search", description: "Optimizing MongoDB queries for location-based searching within specific radii." },
       { title: "Image Optimization", description: "Handling uploads of high-resolution property images and optimizing them for fast loading." }
@@ -99,33 +99,7 @@ export const PROJECTS: Project[] = [
     demoUrl: "#",
     githubUrl: "#"
   },
-  {
-    id: "ems-web-app",
-    title: "EMS - Employee Management",
-    category: "Web Apps",
-    description: "Comprehensive web application for employee CRUD operations and attendance tracking.",
-    longDescription: "A robust internal tool for HR and management to streamline employee data, attendance, leave requests, and performance evaluation. Built with a focus on security and role-based access control.",
-    techStack: ["React.js", "Node.js", "Express.js", "MongoDB"],
-    features: [
-      "Role-based Access Control (Admin, HR, Employee)",
-      "Visual Analytics Dashboard",
-      "Attendance & Leave Management System",
-      "Document Repository",
-      "Automated Salary Slip Generation"
-    ],
-    image: "/media/ems1.jpg",
-    gallery: ["/media/ems1.jpg", "/media/ems2.jpg", "/media/ems3.jpg", "/media/ems4.jpg"],
-    challenges: [
-      { title: "Security", description: "Implementing JWT and secure HTTP-only cookies for session management." },
-      { title: "Complex Queries", description: "Aggregating attendance data for analytical reports." }
-    ],
-    outcomes: [
-      "Deployed for a mid-sized firm with 200+ employees",
-      "Eliminated paper-based leave tracking"
-    ],
-    demoUrl: "#",
-    githubUrl: "#"
-  },
+  
   {
     id: "flavordash-delivery",
     title: "FlavorDash",
@@ -141,8 +115,8 @@ export const PROJECTS: Project[] = [
       "Push Notifications",
       "Secure Wallet System"
     ],
-    image: "/media/food_delivery1.jpg",
-    gallery: ["/media/food_delivery1.jpg", "/media/food_delivery2.jpg", "/media/food_delivery3.jpg", "/media/food_delivery4.jpg"],
+    image: "https://image2url.com/images/1766049919572-043a9f76-1c2b-4124-a08f-e2baf7801e22.jpg",
+    gallery: ["https://image2url.com/images/1766049919572-043a9f76-1c2b-4124-a08f-e2baf7801e22.jpg", "https://image2url.com/images/1766049920656-3eec0e45-31da-47af-9ff1-d1d70b400abb.jpg", "https://image2url.com/images/1766049922000-e37851f2-1ea5-4773-9788-5d2c48d9615d.jpg", "https://image2url.com/images/1766049924088-69644a49-3637-4f2a-82b5-562eb6a35a24.jpg"],
     challenges: [
       { title: "Real-time Location", description: "Optimizing battery usage while maintaining accurate GPS tracking for delivery drivers." },
       { title: "Order State Management", description: "Handling complex order states (Accepted, Preparing, Picked Up, Delivered) across multiple users." }
@@ -170,8 +144,8 @@ export const PROJECTS: Project[] = [
       "Certificate Generation",
       "Discussion Forums"
     ],
-    image: "/media/lms1.jpg",
-    gallery: ["/media/lms1.jpg", "/media/lms2.jpg", "/media/lms3.jpg", "/media/lms4.jpg"],
+    image: "https://image2url.com/images/1766049925320-7931b7fb-27b3-4c93-a7d1-d89f4cc47f00.jpg",
+    gallery: ["https://image2url.com/images/1766049925320-7931b7fb-27b3-4c93-a7d1-d89f4cc47f00.jpg", "https://image2url.com/images/1766049926558-f688adc8-4e6e-4b41-805e-98d71b5ee2fb.jpg", "https://image2url.com/images/1766049927808-4927a3dc-ee6b-43e0-b07e-c6685acfeb78.jpg", "https://image2url.com/images/1766049929415-43d4d80f-9158-4c00-aa08-bec7855237ce.jpg"],
     challenges: [
       { title: "Video Content Delivery", description: "Implementing adaptive bitrate streaming for smooth video playback across different bandwidths." },
       { title: "Database Schema", description: "Designing a flexible schema to handle various course structures and user roles." }
@@ -199,8 +173,8 @@ export const PROJECTS: Project[] = [
       "Apple Health & Google Fit Integration",
       "Offline Mode"
     ],
-    image: "/media/fitness1.jpg",
-    gallery: ["/media/fitness1.jpg", "/media/fitness2.jpg", "/media/fitness3.jpg", "/media/fitness4.jpg"],
+    image: "https://image2url.com/images/1766049914409-ee87f336-2fd3-494c-8b64-a3cdcbf9f095.jpg",
+    gallery: ["https://image2url.com/images/1766049914409-ee87f336-2fd3-494c-8b64-a3cdcbf9f095.jpg", "https://image2url.com/images/1766049915808-e4abe441-59ef-4cfc-b3cd-cbaa20c0b637.jpg", "https://image2url.com/images/1766049917014-8553f007-5e60-4953-a4ee-67794b4f5d36.jpg", "https://image2url.com/images/1766049918364-081f9ab6-e2e3-4a63-933b-fceef5c5c4e3.jpg"],
     challenges: [
       { title: "Data Synchronization", description: "Implementing conflict resolution strategies for offline data syncing." },
       { title: "Performance", description: "Rendering complex interactive charts smoothly on older devices." }
@@ -227,8 +201,8 @@ export const PROJECTS: Project[] = [
       "Integrated Shipping Calculator",
       "SEO Optimized Schema Markup"
     ],
-    image: "/media/shop1.jpg",
-    gallery: ["/media/shop1.jpg", "/media/shop2.jpg", "/media/shop3.jpg", "/media/shop4.jpg"],
+    image: "https://image2url.com/images/1766049939092-271e0fc5-4db6-418a-970c-d91ee3fbcadf.jpg",
+    gallery: ["https://image2url.com/images/1766049939092-271e0fc5-4db6-418a-970c-d91ee3fbcadf.jpg", "https://image2url.com/images/1766049940500-9d553f1b-2150-4057-b24d-59209e1d59a8.jpg", "https://image2url.com/images/1766049942066-08267827-6893-4dbe-b712-b83c386aeb48.jpg", "https://image2url.com/images/1766049943495-10f0cfc8-4b35-426f-9f78-62682c29871f.jpg"],
     challenges: [
       { title: "Performance", description: "Achieving <2s load time despite high-resolution imagery." }
     ],
@@ -252,8 +226,8 @@ export const PROJECTS: Project[] = [
       "Budgeting Goals & Alerts",
       "Dark/Light Theme Support"
     ],
-    image: "/media/financial1.jpg",
-    gallery: ["/media/financial1.jpg", "/media/financial2.jpg", "/media/financial3.jpg", "/media/financial4.jpg"],
+    image: "https://image2url.com/images/1766049909197-1be5d249-fe5c-4e0f-b68b-f2636b9b8da5.jpg",
+    gallery: ["https://image2url.com/images/1766049909197-1be5d249-fe5c-4e0f-b68b-f2636b9b8da5.jpg", "https://image2url.com/images/1766049910190-e0129c16-29ca-4d48-8660-4b0240d1885c.jpg", "https://image2url.com/images/1766049911939-615731b2-592a-42aa-936a-6aec8171e838.jpg", "https://image2url.com/images/1766049913231-a7a8f769-6bf0-489a-81ac-2e7b831838d6.jpg"],
     challenges: [
       { title: "Data Visualization", description: "Rendering large datasets efficiently without blocking the main thread." },
       { title: "API Security", description: "Securely handling sensitive financial tokens and user data encryption." }
@@ -280,8 +254,8 @@ export const PROJECTS: Project[] = [
       "Sponsored Business Listings",
       "Automated Invoicing"
     ],
-    image: "/media/travel1.jpg",
-    gallery: ["/media/travel1.jpg", "/media/travel2.jpg", "/media/travel3.jpg", "/media/travel4.jpg"],
+    image: "https://image2url.com/images/1766049944893-c3df8bfd-fb59-4e83-b125-f461ee456191.jpg",
+    gallery: ["https://image2url.com/images/1766049944893-c3df8bfd-fb59-4e83-b125-f461ee456191.jpg", "https://image2url.com/images/1766049946261-48e0d442-40d9-4606-814b-3b4c5b578215.jpg", "https://image2url.com/images/1766053938934-0d06a64d-c77a-4470-909a-f81bde4976dc.jpg", "https://image2url.com/images/1766053940572-e5b322bc-fdd8-4768-92df-b6a456041b6b.jpg"],
     challenges: [
       { title: "Plugin Conflict", description: "Resolving conflicts between multiple heavy-duty booking plugins." }
     ],
@@ -291,6 +265,8 @@ export const PROJECTS: Project[] = [
     ]
   }
 ];
+
+
 
 export const SKILLS: Skill[] = [
   // Frontend
@@ -545,7 +521,7 @@ export const BLOGS: BlogPost[] = [
     date: "May 15, 2024",
     category: "React",
     readTime: "5 min read",
-    image: "/media/blog1.jpg",
+    image: "https://image2url.com/images/1766049891042-b4f10e7c-3d85-44ea-a828-1618252ee949.jpg",
     content: `
       <h2>Introduction</h2>
       <p>React is fast by default, but as applications grow, performance bottlenecks can appear. In this article, we'll explore 10 actionable techniques to optimize your React applications for speed and efficiency.</p>
@@ -589,7 +565,7 @@ function MyComponent() {
     date: "April 22, 2024",
     category: "Backend",
     readTime: "8 min read",
-    image: "/media/blog2.jpg",
+    image: "https://image2url.com/images/1766049892447-c3a68052-a777-4156-bdff-55d4a9e1b186.jpg",
     content: `
       <h2>Why Structure Matters?</h2>
       <p>When building a backend service, the file structure determines how easy it is to maintain, test, and scale the application. A "spaghetti code" structure can lead to technical debt very quickly.</p>
@@ -629,7 +605,7 @@ exports.getUser = async (req, res, next) => {
     date: "March 10, 2024",
     category: "WordPress",
     readTime: "6 min read",
-    image: "/media/blog3.jpg",
+    image: "https://image2url.com/images/1766049895146-a9babc32-b62d-43ed-9a33-a71a6c36ecd2.jpg",
     content: `
       <h2>Getting Started with Plugin Development</h2>
       <p>WordPress powers over 40% of the web. Creating custom plugins allows you to extend its functionality to meet specific business needs.</p>
@@ -668,7 +644,7 @@ echo esc_html( $title );
     date: "Feb 15, 2024",
     category: "Frontend",
     readTime: "7 min read",
-    image: "/media/blog4.jpg",
+    image: "https://image2url.com/images/1766049893932-b90de5fe-fefc-4b4e-826f-17e00543f04f.jpg",
     content: `
       <h2>What are Generics?</h2>
       <p>Generics allow you to define a component or function that can work with a variety of types rather than a single one. This allows users to consume these components and use their own types.</p>

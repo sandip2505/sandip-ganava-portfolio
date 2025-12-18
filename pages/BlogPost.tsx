@@ -128,7 +128,7 @@ export default function BlogPost() {
                <div className="mt-16 p-8 bg-gray-50 dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-gray-800 flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
                   <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-lg shrink-0">
                     <img 
-                      src="../../media/sandip-ganava.jpg" 
+                      src="https://image2url.com/images/1766049935607-5f73a5bf-5161-4c58-bba3-5995eb4d71a6.jpg" 
                       alt="Sandip Ganava" 
                       className="w-full h-full object-cover"
                     />

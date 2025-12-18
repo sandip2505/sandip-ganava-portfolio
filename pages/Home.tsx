@@ -62,7 +62,7 @@ export default function Home() {
                 <Link to="/projects" className="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-semibold shadow-lg shadow-primary-500/30 transition-all hover:scale-105 flex items-center justify-center gap-2">
                   View Projects <ArrowRight size={20} />
                 </Link>
-                <a href="#" className="px-8 py-4 bg-white dark:bg-slate-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2">
+                <a href="./media/sandip__resume.pdf" className="px-8 py-4 bg-white dark:bg-slate-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2">
                   Download CV <Download size={20} />
                 </a>
               </motion.div>
@@ -77,7 +77,7 @@ export default function Home() {
               <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full blur-2xl opacity-50 animate-pulse"></div>
                 <img 
-                  src="../../media/sandip-ganava.jpg" 
+                  src="https://image2url.com/images/1766049935607-5f73a5bf-5161-4c58-bba3-5995eb4d71a6.jpg" 
                   alt="Sandip Ganava" 
                   className="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-2xl z-10"
                 />

@@ -48,7 +48,7 @@ export default function About() {
                   My journey started with a curiosity for how things work on the internet, which quickly turned into a passion for building robust applications using the MERN stack, React Native, and WordPress.
                 </p>
                 <div className="pt-4">
-                  <a href="#" className="inline-flex items-center gap-2 px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-semibold shadow-lg shadow-primary-500/30 transition-all hover:-translate-y-1">
+                  <a href="./media/sandip__resume.pdf" className="inline-flex items-center gap-2 px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-semibold shadow-lg shadow-primary-500/30 transition-all hover:-translate-y-1">
                     <Download size={20} /> Download CV
                   </a>
                 </div>
@@ -64,7 +64,7 @@ export default function About() {
                    <div className="absolute inset-0 bg-gradient-to-tr from-primary-500 to-secondary-500 rounded-3xl rotate-6 opacity-20 blur-2xl"></div>
                    <div className="absolute inset-0 bg-gray-200 dark:bg-slate-800 rounded-3xl -rotate-6 transform scale-95 border border-gray-100 dark:border-gray-700"></div>
                    <img 
-                     src="../../media/sandy.png" 
+                     src="https://image2url.com/images/1766049937688-ee79de0f-1dbf-4916-8fe8-bc91a244969d.png" 
                      alt="Sandip Ganava" 
                      className="relative w-full h-full object-cover rounded-3xl shadow-2xl z-10 border-4 border-white dark:border-slate-800"
                    />
