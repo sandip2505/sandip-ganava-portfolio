@@ -64,11 +64,11 @@ export default function Services() {
         <meta name="description" content="Professional web and mobile development services including MERN Stack, React Native, WordPress, and API integration." />
       </Helmet>
 
-      <section className="pt-16 pb-24 bg-white dark:bg-slate-950">
+      <section className="pt-16 pb-24 bg-white dark:bg-dark-bg">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Services I Offer</h1>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               End-to-end development solutions designed to help your business grow, scalable from day one.
             </p>
           </div>
@@ -83,12 +83,12 @@ export default function Services() {
                 transition={{ delay: idx * 0.1 }}
               >
                 <Link to={`/services/${service.id}`} className="block h-full">
-                  <div className="h-full bg-gray-50 dark:bg-slate-900 p-8 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 group flex flex-col">
-                    <div className="w-16 h-16 bg-white dark:bg-slate-800 rounded-2xl flex items-center justify-center text-primary-600 shadow-sm mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                  <div className="h-full bg-gray-50 dark:bg-dark-bg p-8 rounded-3xl border border-gray-100 dark:border-dark-border hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 group flex flex-col">
+                    <div className="w-16 h-16 bg-white dark:bg-dark-surface rounded-2xl flex items-center justify-center text-primary-600 shadow-sm mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                       <service.icon size={32} />
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-primary-600 transition-colors">{service.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 flex-1">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 flex-1">
                       {service.description}
                     </p>
                     <div className="flex items-center gap-2 text-primary-600 font-medium mt-auto">
@@ -106,7 +106,7 @@ export default function Services() {
             <div className="text-center mb-20">
               <span className="text-primary-600 font-bold tracking-wider uppercase text-sm bg-primary-50 dark:bg-primary-900/20 px-4 py-1.5 rounded-full">My Workflow</span>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mt-4">How I Work</h2>
-              <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto text-lg">
+              <p className="text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto text-lg">
                 A transparent, agile process ensures your project is delivered on time, within budget, and to the highest standard.
               </p>
             </div>
@@ -139,7 +139,7 @@ export default function Services() {
 
                      {/* Content Card */}
                      <div className={`pl-20 md:pl-0 w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-16' : 'md:pl-16'}`}>
-                        <div className={`group relative bg-white dark:bg-slate-900 p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-transparent ${s.border.replace('group-hover:', 'hover:')}`}>
+                        <div className={`group relative bg-white dark:bg-dark-bg p-8 rounded-3xl border border-gray-100 dark:border-dark-border shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-transparent ${s.border.replace('group-hover:', 'hover:')}`}>
                            {/* Decorative Number */}
                            <span className="absolute top-4 right-6 text-6xl font-black text-gray-50 dark:text-slate-800/50 opacity-50 z-0 select-none group-hover:opacity-100 group-hover:text-gray-100 dark:group-hover:text-slate-800 transition-all duration-300">
                              {s.id}
@@ -147,11 +147,11 @@ export default function Services() {
 
                            <div className="relative z-10">
                              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">{s.title}</h3>
-                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{s.desc}</p>
+                             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{s.desc}</p>
                            </div>
                            
                            {/* Arrow indicator for desktop flow */}
-                           <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white dark:bg-slate-900 border-t border-l border-gray-100 dark:border-gray-800 transform rotate-45 ${index % 2 === 0 ? '-right-2 border-r-0 border-b-0' : '-left-2 border-r border-b border-t-0 border-l-0'}`}></div>
+                           <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white dark:bg-dark-bg border-t border-l border-gray-100 dark:border-dark-border transform rotate-45 ${index % 2 === 0 ? '-right-2 border-r-0 border-b-0' : '-left-2 border-r border-b border-t-0 border-l-0'}`}></div>
                         </div>
                      </div>
 

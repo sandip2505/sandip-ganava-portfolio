@@ -22,7 +22,7 @@ export default function About() {
         <meta name="description" content="Get to know Sandip Ganava - his journey, education, work philosophy, and what drives him as a Full-Stack Developer." />
       </Helmet>
 
-      <div className="bg-white dark:bg-slate-950 overflow-hidden">
+      <div className="bg-white dark:bg-dark-bg overflow-hidden">
         
         {/* 1. Introduction Section & 2. Professional Photo Section */}
         <section className="pt-10 pb-20 relative">
@@ -62,11 +62,11 @@ export default function About() {
               >
                 <div className="relative w-80 h-80 md:w-[450px] md:h-[450px] mx-auto">
                    <div className="absolute inset-0 bg-gradient-to-tr from-primary-500 to-secondary-500 rounded-3xl rotate-6 opacity-20 blur-2xl"></div>
-                   <div className="absolute inset-0 bg-gray-200 dark:bg-slate-800 rounded-3xl -rotate-6 transform scale-95 border border-gray-100 dark:border-gray-700"></div>
-                   <img 
+                   <div className="absolute inset-0 bg-gray-200 dark:bg-dark-surface rounded-3xl -rotate-6 transform scale-95 border border-gray-100 dark:border-dark-border"></div>
+                   <img loading="lazy" 
                      src="https://image2url.com/images/1766049937688-ee79de0f-1dbf-4916-8fe8-bc91a244969d.png" 
                      alt="Sandip Ganava" 
-                     className="relative w-full h-full object-cover rounded-3xl shadow-2xl z-10 border-4 border-white dark:border-slate-800"
+                     className="relative w-full h-full object-cover rounded-3xl shadow-2xl z-10 border-4 border-white dark:border-dark-border"
                    />
                 </div>
               </motion.div>
@@ -75,11 +75,11 @@ export default function About() {
         </section>
 
         {/* 3. Journey Timeline Section */}
-        <section className="py-20 bg-gray-50 dark:bg-slate-900">
+        <section className="py-20 bg-gray-50 dark:bg-dark-bg">
           <div className="container mx-auto px-4">
             <motion.div {...fadeInUp} className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Professional Journey</h2>
-              <p className="text-gray-600 dark:text-gray-400">My path in the tech industry.</p>
+              <p className="text-gray-600 dark:text-gray-300">My path in the tech industry.</p>
             </motion.div>
             <div className="max-w-3xl mx-auto space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 dark:before:via-gray-700 before:to-transparent">
               {workHistory.map((item, index) => (
@@ -91,16 +91,16 @@ export default function About() {
                   transition={{ delay: index * 0.1 }}
                   className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
                 >
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-primary-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 text-primary-600">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-primary-100 dark:border-dark-border bg-white dark:bg-dark-bg shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 text-primary-600">
                     <Briefcase size={18} />
                   </div>
-                  <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-shadow">
+                  <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-dark-surface p-6 rounded-xl shadow-sm border border-gray-100 dark:border-dark-border hover:shadow-md transition-shadow">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
                       <h3 className="font-bold text-gray-900 dark:text-white">{item.title}</h3>
                       <time className="text-xs font-medium text-primary-600 bg-primary-50 dark:bg-primary-900/30 px-2 py-1 rounded">{item.year}</time>
                     </div>
                     <div className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">{item.company}</div>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{item.description}</p>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{item.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -109,27 +109,27 @@ export default function About() {
         </section>
 
         {/* 4. Education Section */}
-        <section className="py-20 bg-white dark:bg-slate-950">
+        <section className="py-20 bg-white dark:bg-dark-bg">
           <div className="container mx-auto px-4">
             <motion.div {...fadeInUp} className="text-center mb-16">
                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Education</h2>
-               <p className="text-gray-600 dark:text-gray-400">My academic foundation.</p>
+               <p className="text-gray-600 dark:text-gray-300">My academic foundation.</p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                {educationHistory.map((edu, idx) => (
                  <motion.div 
                    key={idx}
                    whileHover={{ y: -5 }}
-                   className="bg-gray-50 dark:bg-slate-900 p-8 rounded-2xl border border-gray-100 dark:border-gray-800 flex items-start gap-4"
+                   className="bg-gray-50 dark:bg-dark-bg p-8 rounded-2xl border border-gray-100 dark:border-dark-border flex items-start gap-4"
                  >
-                   <div className="p-3 bg-white dark:bg-slate-800 rounded-lg text-primary-600 shadow-sm">
+                   <div className="p-3 bg-white dark:bg-dark-surface rounded-lg text-primary-600 shadow-sm">
                      <GraduationCap size={24} />
                    </div>
                    <div>
                      <span className="text-xs font-bold text-primary-600 uppercase tracking-wider">{edu.year}</span>
                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-1 mb-2">{edu.title}</h3>
                      <p className="text-gray-700 dark:text-gray-300 font-medium">{edu.company}</p>
-                     <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">{edu.description}</p>
+                     <p className="text-gray-500 dark:text-gray-300 text-sm mt-2">{edu.description}</p>
                    </div>
                  </motion.div>
                ))}
@@ -162,7 +162,7 @@ export default function About() {
                        </div>
                        <div>
                          <h4 className="font-bold text-gray-900 dark:text-white mb-1">{item.title}</h4>
-                         <p className="text-gray-600 dark:text-gray-400 text-sm">{item.desc}</p>
+                         <p className="text-gray-600 dark:text-gray-300 text-sm">{item.desc}</p>
                        </div>
                      </motion.div>
                    ))}
@@ -172,7 +172,7 @@ export default function About() {
                {/* Approach */}
                <div>
                   <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">My Approach</h2>
-                  <div className="relative border-l-2 border-dashed border-gray-300 dark:border-gray-700 ml-3 space-y-8 pl-8">
+                  <div className="relative border-l-2 border-dashed border-gray-300 dark:border-dark-border ml-3 space-y-8 pl-8">
                     {[
                       { title: "Discovery & Strategy", desc: "Understanding the core problem before writing a single line of code." },
                       { title: "Agile Development", desc: "Iterative sprints with regular feedback loops to ensure alignment." },
@@ -180,11 +180,11 @@ export default function About() {
                       { title: "Deployment & Scale", desc: "Smooth launch with monitoring and scalability in mind." }
                     ].map((step, i) => (
                       <div key={i} className="relative">
-                        <div className="absolute -left-[41px] top-1 w-6 h-6 bg-white dark:bg-slate-900 border-2 border-primary-500 rounded-full flex items-center justify-center text-xs font-bold text-primary-600">
+                        <div className="absolute -left-[41px] top-1 w-6 h-6 bg-white dark:bg-dark-bg border-2 border-primary-500 rounded-full flex items-center justify-center text-xs font-bold text-primary-600">
                           {i + 1}
                         </div>
                         <h4 className="font-bold text-gray-900 dark:text-white">{step.title}</h4>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">{step.desc}</p>
+                        <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">{step.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -240,7 +240,7 @@ export default function About() {
         </section>
 
         {/* 8. Achievement Highlights */}
-        <section className="py-20 bg-white dark:bg-slate-950">
+        <section className="py-20 bg-white dark:bg-dark-bg">
           <div className="container mx-auto px-4 text-center">
              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">Proud Moments</h2>
              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -252,13 +252,13 @@ export default function About() {
                  <motion.div 
                    key={i}
                    whileHover={{ y: -10 }}
-                   className="p-8 rounded-2xl bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-gray-800"
+                   className="p-8 rounded-2xl bg-gray-50 dark:bg-dark-bg border border-gray-100 dark:border-dark-border"
                  >
-                   <div className="w-16 h-16 mx-auto bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-yellow-500 shadow-sm mb-4">
+                   <div className="w-16 h-16 mx-auto bg-white dark:bg-dark-surface rounded-full flex items-center justify-center text-yellow-500 shadow-sm mb-4">
                      <ach.icon size={32} />
                    </div>
                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{ach.title}</h3>
-                   <p className="text-gray-600 dark:text-gray-400">{ach.org}</p>
+                   <p className="text-gray-600 dark:text-gray-300">{ach.org}</p>
                    <span className="text-sm font-medium text-primary-600 mt-2 block">{ach.year}</span>
                  </motion.div>
                ))}
@@ -267,9 +267,9 @@ export default function About() {
         </section>
 
         {/* 9. Why Work With Me Section */}
-        <section className="py-20 bg-gray-50 dark:bg-slate-900">
+        <section className="py-20 bg-gray-50 dark:bg-dark-bg">
            <div className="container mx-auto px-4 max-w-4xl">
-             <div className="bg-white dark:bg-slate-800 rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 dark:border-gray-700">
+             <div className="bg-white dark:bg-dark-surface rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 dark:border-dark-border">
                <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">Why Work With Me?</h2>
                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                  {[
@@ -291,10 +291,10 @@ export default function About() {
         </section>
 
         {/* 11. Download CV Section */}
-        <section className="py-20 text-center bg-white dark:bg-slate-950">
+        <section className="py-20 text-center bg-white dark:bg-dark-bg">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Interested in my full profile?</h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-8">Download my resume to view detailed experience and qualifications.</p>
+            <p className="text-gray-600 dark:text-gray-300 mb-8">Download my resume to view detailed experience and qualifications.</p>
             <button className="px-10 py-4 bg-primary-600 text-white rounded-xl font-bold shadow-lg shadow-primary-500/30 hover:bg-primary-700 transition-all hover:scale-105 flex items-center justify-center gap-2 mx-auto">
               <Download size={24} /> Download CV
             </button>

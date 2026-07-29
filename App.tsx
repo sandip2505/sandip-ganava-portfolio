@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './context/ThemeContext';
 import { Layout } from './components/Layout';
@@ -18,13 +18,13 @@ const Contact = React.lazy(() => import('./pages/Contact'));
 
 // Loading Fallback
 const Loading = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-slate-900">
+  <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-dark-bg">
     <div className="w-12 h-12 border-4 border-primary-600 border-t-transparent rounded-full animate-spin"></div>
   </div>
 );
 
 const NotFound = () => (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-slate-900 text-center px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-dark-bg text-center px-4">
         <h1 className="text-6xl font-bold text-primary-600 mb-4">404</h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">Page not found</p>
         <a href="/" className="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700">Go Home</a>

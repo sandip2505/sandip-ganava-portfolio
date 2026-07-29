@@ -15,7 +15,7 @@ export const SOCIAL_LINKS = {
 
 export const PROJECTS: Project[] = [
   {
-    id: "ems-emplaoyee-management-system",
+    id: "ems-employee-management-system",
     title: "Employee Management System",
     subtitle: "HR & Attendance Tool",
     category: "Web Apps",

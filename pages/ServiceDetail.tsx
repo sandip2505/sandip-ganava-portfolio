@@ -30,10 +30,10 @@ export default function ServiceDetail() {
         <meta name="description" content={service.description} />
       </Helmet>
 
-      <div className="bg-white dark:bg-slate-950 min-h-screen pb-20">
+      <div className="bg-white dark:bg-dark-bg min-h-screen pb-20">
         
         {/* Hero Section */}
-        <section className="relative pt-20 pb-20 bg-gray-50 dark:bg-slate-900 overflow-hidden">
+        <section className="relative pt-20 pb-20 bg-gray-50 dark:bg-dark-bg overflow-hidden">
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary-100 dark:bg-primary-900/20 rounded-full blur-3xl opacity-50"></div>
           <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-secondary-100 dark:bg-secondary-900/20 rounded-full blur-3xl opacity-50"></div>
           
@@ -46,7 +46,7 @@ export default function ServiceDetail() {
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="w-16 h-16 bg-white dark:bg-slate-800 rounded-2xl flex items-center justify-center text-primary-600 shadow-lg mb-8"
+                className="w-16 h-16 bg-white dark:bg-dark-surface rounded-2xl flex items-center justify-center text-primary-600 shadow-lg mb-8"
               >
                 <service.icon size={32} />
               </motion.div>
@@ -94,7 +94,7 @@ export default function ServiceDetail() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: idx * 0.05 }}
-                      className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4"
+                      className="bg-white dark:bg-dark-bg p-6 rounded-xl border border-gray-100 dark:border-dark-border shadow-sm hover:shadow-md transition-shadow flex items-start gap-4"
                     >
                       <div className="mt-1 bg-green-100 dark:bg-green-900/30 p-1.5 rounded-full text-green-600 dark:text-green-400 shrink-0">
                         <CheckCircle2 size={16} />
@@ -122,14 +122,14 @@ export default function ServiceDetail() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: idx * 0.1 }}
-                      className="flex gap-6 p-6 bg-gray-50 dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-gray-800"
+                      className="flex gap-6 p-6 bg-gray-50 dark:bg-dark-bg rounded-2xl border border-gray-100 dark:border-dark-border"
                     >
-                      <div className="hidden sm:flex w-10 h-10 bg-white dark:bg-slate-800 rounded-full items-center justify-center text-primary-600 font-bold shadow-sm shrink-0">
+                      <div className="hidden sm:flex w-10 h-10 bg-white dark:bg-dark-surface rounded-full items-center justify-center text-primary-600 font-bold shadow-sm shrink-0">
                         {idx + 1}
                       </div>
                       <div>
                         <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{benefit.title}</h3>
-                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{benefit.description}</p>
+                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{benefit.description}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -145,7 +145,7 @@ export default function ServiceDetail() {
               <motion.div 
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800"
+                className="bg-white dark:bg-dark-bg p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-dark-border"
               >
                 <div className="flex items-center gap-3 mb-6">
                   <Cpu size={20} className="text-primary-600" />
@@ -155,7 +155,7 @@ export default function ServiceDetail() {
                   {service.technologies?.map((tech, idx) => (
                     <span 
                       key={idx} 
-                      className="px-3 py-1.5 bg-gray-50 dark:bg-slate-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium border border-gray-100 dark:border-gray-700"
+                      className="px-3 py-1.5 bg-gray-50 dark:bg-dark-surface text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium border border-gray-100 dark:border-dark-border"
                     >
                       {tech}
                     </span>

@@ -85,14 +85,14 @@ export default function BlogPost() {
       
       <ScrollProgress />
 
-      <article className="bg-white dark:bg-slate-950 min-h-screen pb-20 pt-8">
+      <article className="bg-white dark:bg-dark-bg min-h-screen pb-20 pt-8">
         <div className="container mx-auto px-4 max-w-5xl">
           <Link to="/blog" className="inline-flex items-center text-gray-500 hover:text-primary-600 mb-8 transition-colors font-medium">
             <ArrowLeft size={20} className="mr-2" /> Back to Blog
           </Link>
 
           <header className="mb-10 text-center max-w-4xl mx-auto">
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-6">
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 dark:text-gray-300 mb-6">
               <span className="flex items-center gap-1.5"><Calendar size={16} /> {post.date}</span>
               <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
               <span className="flex items-center gap-1.5"><Clock size={16} /> {post.readTime}</span>
@@ -107,7 +107,7 @@ export default function BlogPost() {
           </header>
 
           <div className="relative aspect-[21/9] rounded-3xl overflow-hidden mb-16 shadow-2xl">
-            <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+            <img loading="lazy" src={post.image} alt={post.title} className="w-full h-full object-cover" />
           </div>
 
           <div className="flex flex-col lg:flex-row gap-16">
@@ -125,9 +125,9 @@ export default function BlogPost() {
                ></div>
 
                {/* Author Bio Section */}
-               <div className="mt-16 p-8 bg-gray-50 dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-gray-800 flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
-                  <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-lg shrink-0">
-                    <img 
+               <div className="mt-16 p-8 bg-gray-50 dark:bg-dark-bg rounded-2xl border border-gray-100 dark:border-dark-border flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
+                  <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white dark:border-dark-border shadow-lg shrink-0">
+                    <img loading="lazy" 
                       src="https://image2url.com/images/1766049935607-5f73a5bf-5161-4c58-bba3-5995eb4d71a6.jpg" 
                       alt="Sandip Ganava" 
                       className="w-full h-full object-cover"
@@ -136,7 +136,7 @@ export default function BlogPost() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Written by Sandip Ganava</h3>
                     <p className="text-sm text-primary-600 font-medium mb-3">Full-Stack Developer & Tech Enthusiast</p>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">
                       Passionate about building scalable web applications and sharing knowledge with the developer community. 
                       Specializing in the MERN stack and modern frontend architecture.
                     </p>
@@ -155,7 +155,7 @@ export default function BlogPost() {
             <div className="lg:w-[30%]">
               <div className="sticky top-28 space-y-8">
                 {/* Share Card */}
-                <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm">
+                <div className="bg-white dark:bg-dark-bg p-6 rounded-2xl border border-gray-100 dark:border-dark-border shadow-sm">
                   <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                     <Share2 size={18} /> Share this post
                   </h3>
@@ -166,7 +166,7 @@ export default function BlogPost() {
                         href={platform.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 transition-all hover:shadow-md hover:scale-[1.02] ${platform.color}`}
+                        className={`flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-dark-surface border border-gray-200 dark:border-dark-border text-gray-600 dark:text-gray-300 transition-all hover:shadow-md hover:scale-[1.02] ${platform.color}`}
                       >
                         <platform.icon size={20} />
                         <span className="font-medium">{platform.name}</span>
@@ -174,7 +174,7 @@ export default function BlogPost() {
                     ))}
                     <button
                       onClick={handleCopyLink}
-                      className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 transition-all hover:shadow-md hover:scale-[1.02] hover:text-green-600 group"
+                      className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-dark-surface border border-gray-200 dark:border-dark-border text-gray-600 dark:text-gray-300 transition-all hover:shadow-md hover:scale-[1.02] hover:text-green-600 group"
                     >
                       {copied ? <Check size={20} /> : <LinkIcon size={20} />}
                       <span className="font-medium">{copied ? 'Copied!' : 'Copy Link'}</span>
@@ -183,11 +183,11 @@ export default function BlogPost() {
                 </div>
 
                 {/* Categories / Tags (Placeholder) */}
-                <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm">
+                <div className="bg-white dark:bg-dark-bg p-6 rounded-2xl border border-gray-100 dark:border-dark-border shadow-sm">
                   <h3 className="font-bold text-gray-900 dark:text-white mb-4">Related Topics</h3>
                   <div className="flex flex-wrap gap-2">
                     {['React', 'Web Development', 'Performance', 'JavaScript', 'Backend', 'Tutorial'].map(tag => (
-                      <span key={tag} className="px-3 py-1 bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-400 text-xs font-medium rounded-full">
+                      <span key={tag} className="px-3 py-1 bg-gray-100 dark:bg-dark-surface text-gray-600 dark:text-gray-300 text-xs font-medium rounded-full">
                         #{tag}
                       </span>
                     ))}
@@ -198,14 +198,14 @@ export default function BlogPost() {
           </div>
 
           {/* Related Posts Section */}
-          <div className="mt-24 pt-12 border-t border-gray-200 dark:border-gray-800">
+          <div className="mt-24 pt-12 border-t border-gray-200 dark:border-dark-border">
              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">You might also like</h2>
              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                {displayRelated.map((related) => (
                  <Link to={`/blog/${related.id}`} key={related.id} className="group">
-                   <div className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all h-full flex flex-col border border-gray-100 dark:border-gray-800">
+                   <div className="bg-white dark:bg-dark-bg rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all h-full flex flex-col border border-gray-100 dark:border-dark-border">
                      <div className="h-48 overflow-hidden">
-                       <img src={related.image} alt={related.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                       <img loading="lazy" src={related.image} alt={related.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                      </div>
                      <div className="p-6 flex-1 flex flex-col">
                        <div className="flex items-center gap-2 text-xs text-primary-600 font-medium mb-3">

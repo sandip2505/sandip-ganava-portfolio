@@ -24,15 +24,15 @@ export default function ProjectDetail() {
         <meta name="description" content={project.description} />
       </Helmet>
 
-      <div className="bg-white dark:bg-slate-950 min-h-screen pb-20">
+      <div className="bg-white dark:bg-dark-bg min-h-screen pb-20">
         {/* Header Image */}
         <div className="relative h-[50vh] w-full">
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent z-10"></div>
-          <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-          <div className="absolute bottom-0 left-0 w-full z-20 p-4 md:p-8">
+          <img src={project.image} alt={project.title} fetchpriority="high" className="w-full h-full object-cover" />
+          <div className="absolute bottom-0 left-0 w-full z-20 p-4 pb-16 md:p-8 md:pb-24">
             <div className="container mx-auto">
-              <Link to="/projects" className="inline-flex items-center text-white/80 hover:text-white mb-4 transition-colors">
-                <ArrowLeft size={20} className="mr-2" /> Back to Projects
+              <Link to="/projects" className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/10 text-white rounded-full text-sm font-medium mb-6 transition-all hover:-translate-x-1">
+                <ArrowLeft size={16} /> Back to Projects
               </Link>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-2">{project.title}</h1>
               <p className="text-xl text-gray-200 max-w-2xl">{project.subtitle || project.category}</p>
@@ -45,10 +45,10 @@ export default function ProjectDetail() {
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-8">
               {/* Overview Card */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800"
+                className="bg-white dark:bg-dark-bg p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-dark-border"
               >
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Project Overview</h2>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
@@ -62,7 +62,7 @@ export default function ProjectDetail() {
                     </a>
                   )}
                   {project.githubUrl && (
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-slate-800 text-gray-900 dark:text-white rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-dark-surface text-gray-900 dark:text-white rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">
                       <Github size={18} /> View Code
                     </a>
                   )}
@@ -70,11 +70,11 @@ export default function ProjectDetail() {
               </motion.div>
 
               {/* Key Features */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800"
+                className="bg-white dark:bg-dark-bg p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-dark-border"
               >
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                   <Layers className="text-primary-600" /> Key Features
@@ -88,27 +88,39 @@ export default function ProjectDetail() {
                   ))}
                 </div>
               </motion.div>
-              
+
               {/* Gallery */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-6"
+              >
                 {project.gallery.map((img, idx) => (
-                  <img key={idx} src={img} alt={`Screenshot ${idx}`} className="rounded-xl shadow-md hover:shadow-xl transition-shadow cursor-pointer" />
+                  <motion.div
+                    key={idx}
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className="overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all border border-gray-100 dark:border-dark-border bg-white dark:bg-dark-bg"
+                  >
+                    <img loading="lazy" src={img} alt={`Screenshot ${idx}`} className="w-full h-auto object-cover cursor-pointer hover:opacity-90 transition-opacity" />
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
 
             {/* Sidebar */}
-            <div className="space-y-8">
+            <div className="space-y-8 lg:sticky lg:top-24 h-fit">
               {/* Tech Stack */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800"
+                className="bg-white dark:bg-dark-bg p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-dark-border"
               >
                 <h3 className="font-bold text-gray-900 dark:text-white mb-4">Technologies Used</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map(tech => (
-                    <span key={tech} className="px-3 py-1 bg-primary-50 dark:bg-slate-800 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium border border-primary-100 dark:border-slate-700">
+                    <span key={tech} className="px-3 py-1 bg-primary-50 dark:bg-dark-surface text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium border border-primary-100 dark:border-dark-border">
                       {tech}
                     </span>
                   ))}
@@ -116,7 +128,7 @@ export default function ProjectDetail() {
               </motion.div>
 
               {/* Challenges */}
-              <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+              <div className="bg-white dark:bg-dark-bg p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-dark-border">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                   <AlertCircle size={18} className="text-orange-500" /> Technical Challenges
                 </h3>
@@ -124,7 +136,7 @@ export default function ProjectDetail() {
                   {project.challenges.map((c, i) => (
                     <div key={i}>
                       <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">{c.title}</h4>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{c.description}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-300 mt-1">{c.description}</p>
                     </div>
                   ))}
                 </div>

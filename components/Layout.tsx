@@ -38,7 +38,7 @@ export const Header: React.FC = () => {
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled || isOpen
-          ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50 shadow-sm' 
+          ? 'bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-gray-200/50 dark:border-dark-border/50 shadow-sm' 
           : 'bg-transparent border-b border-transparent'
       }`}
     >
@@ -59,7 +59,7 @@ export const Header: React.FC = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1">
-            <div className="flex items-center bg-gray-100/50 dark:bg-gray-800/50 p-1 rounded-full border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm mr-4">
+            <div className="flex items-center bg-gray-100/50 dark:bg-gray-800/50 p-1 rounded-full border border-gray-200/50 dark:border-dark-border/50 backdrop-blur-sm mr-4">
               {NavLinks.map((link) => (
                 <NavLink
                   key={link.path}
@@ -68,7 +68,7 @@ export const Header: React.FC = () => {
                     `px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 relative ${
                       isActive 
                         ? 'text-primary-600 dark:text-primary-400' 
-                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+                        : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-200'
                     }`
                   }
                 >
@@ -77,7 +77,7 @@ export const Header: React.FC = () => {
                       {isActive && (
                         <motion.div
                           layoutId="desktop-nav-pill"
-                          className="absolute inset-0 bg-white dark:bg-slate-700 rounded-full shadow-sm"
+                          className="absolute inset-0 bg-white dark:bg-dark-card rounded-full shadow-sm"
                           transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                         />
                       )}
@@ -133,7 +133,7 @@ export const Header: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: '100vh' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden fixed inset-0 top-0 pt-20 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl z-40 overflow-hidden flex flex-col"
+            className="md:hidden fixed inset-0 top-0 pt-20 bg-white/95 dark:bg-dark-bg/95 backdrop-blur-xl z-40 overflow-hidden flex flex-col"
           >
             <div className="flex-1 overflow-y-auto px-6 py-8 space-y-2">
               {NavLinks.map((link, idx) => (
@@ -149,7 +149,7 @@ export const Header: React.FC = () => {
                       `flex items-center justify-between px-6 py-4 rounded-2xl text-lg font-medium transition-all ${
                         isActive
                           ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 shadow-sm border border-primary-100 dark:border-primary-800'
-                          : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900'
+                          : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900'
                       }`
                     }
                   >
@@ -162,13 +162,13 @@ export const Header: React.FC = () => {
               ))}
             </div>
             
-            <div className="p-6 border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-slate-900/50">
+            <div className="p-6 border-t border-gray-100 dark:border-dark-border bg-gray-50/50 dark:bg-dark-bg/50">
               <div className="flex justify-center gap-6">
                  {Object.entries(SOCIAL_LINKS).slice(0, 3).map(([key, url]) => (
                    <a 
                     key={key}
                     href={url}
-                    className="p-3 rounded-full bg-white dark:bg-slate-800 shadow-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 hover:scale-110 transition-all"
+                    className="p-3 rounded-full bg-white dark:bg-dark-surface shadow-sm text-gray-500 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:scale-110 transition-all"
                    >
                      {key === 'github' && <Github size={20} />}
                      {key === 'linkedin' && <Linkedin size={20} />}
@@ -190,7 +190,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-white dark:bg-slate-950 border-t border-gray-200 dark:border-gray-800 pt-20 pb-10 relative overflow-hidden">
+    <footer className="bg-white dark:bg-dark-bg border-t border-gray-200 dark:border-dark-border pt-20 pb-10 relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl -translate-y-1/2 pointer-events-none"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-500/5 rounded-full blur-3xl translate-y-1/2 pointer-events-none"></div>
@@ -206,20 +206,20 @@ export const Footer: React.FC = () => {
               </div>
               <span className="text-xl font-bold text-gray-900 dark:text-white">Sandip Ganava</span>
             </div>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
               Crafting digital experiences that merge innovation with functionality. Let's build something exceptional together.
             </p>
             <div className="flex gap-3">
-              <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-900 text-gray-500 dark:text-gray-400 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all duration-300">
+              <a aria-label="GitHub" href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-900 text-gray-500 dark:text-gray-300 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all duration-300">
                 <Github size={18} />
               </a>
-              <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-900 text-gray-500 dark:text-gray-400 hover:bg-[#0077b5] hover:text-white transition-all duration-300">
+              <a aria-label="LinkedIn" href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-900 text-gray-500 dark:text-gray-300 hover:bg-[#0077b5] hover:text-white transition-all duration-300">
                 <Linkedin size={18} />
               </a>
-              <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-900 text-gray-500 dark:text-gray-400 hover:bg-[#1DA1F2] hover:text-white transition-all duration-300">
+              <a aria-label="Twitter" href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-900 text-gray-500 dark:text-gray-300 hover:bg-[#1DA1F2] hover:text-white transition-all duration-300">
                 <Twitter size={18} />
               </a>
-              <a href={`mailto:${SOCIAL_LINKS.email}`} className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-900 text-gray-500 dark:text-gray-400 hover:bg-red-500 hover:text-white transition-all duration-300">
+              <a aria-label="Email" href={`mailto:${SOCIAL_LINKS.email}`} className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-900 text-gray-500 dark:text-gray-300 hover:bg-red-500 hover:text-white transition-all duration-300">
                 <Mail size={18} />
               </a>
             </div>
@@ -233,7 +233,7 @@ export const Footer: React.FC = () => {
                 <li key={item}>
                   <NavLink
                     to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                    className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors inline-block hover:translate-x-1 duration-200"
+                    className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors inline-block hover:translate-x-1 duration-200"
                   >
                     {item}
                   </NavLink>
@@ -247,7 +247,7 @@ export const Footer: React.FC = () => {
             <h4 className="font-bold text-gray-900 dark:text-white mb-6">Services</h4>
             <ul className="space-y-3 text-sm">
               {['Web Development', 'Mobile Apps', 'WordPress', 'E-commerce', 'API Integration'].map((item) => (
-                <li key={item} className="text-gray-600 dark:text-gray-400">
+                <li key={item} className="text-gray-600 dark:text-gray-300">
                   {item}
                 </li>
               ))}
@@ -257,14 +257,14 @@ export const Footer: React.FC = () => {
           {/* Newsletter Column */}
           <div>
             <h4 className="font-bold text-gray-900 dark:text-white mb-6">Stay Updated</h4>
-            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+            <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
               Subscribe to my newsletter for the latest updates and tech insights.
             </p>
             <div className="relative group">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 focus:border-primary-500 dark:focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 focus:outline-none transition-all pr-12 text-sm"
+                className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-dark-border focus:border-primary-500 dark:focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 focus:outline-none transition-all pr-12 text-sm"
               />
               <button className="absolute right-2 top-2 p-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors shadow-lg shadow-primary-500/30">
                 <Send size={16} />
@@ -274,8 +274,8 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-gray-500 dark:text-gray-400 flex flex-col md:flex-row items-center gap-2">
+        <div className="pt-8 border-t border-gray-200 dark:border-dark-border flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-sm text-gray-500 dark:text-gray-300 flex flex-col md:flex-row items-center gap-2">
             <span>© {new Date().getFullYear()} Sandip Ganava. All rights reserved.</span>
             <span className="hidden md:inline text-gray-300 dark:text-gray-700">•</span>
             <span className="flex items-center gap-1">Made with <Heart size={12} className="text-red-500 fill-red-500" /> and Node JS</span>

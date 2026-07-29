@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import './index.css';
 
 // In a real CRA/Vite app this file usually exists. 
 // We are relying on index.html script tag for Tailwind.

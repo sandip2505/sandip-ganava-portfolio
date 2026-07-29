@@ -33,13 +33,13 @@ const SkillSection: React.FC<SkillSectionProps> = ({ title, skills, icon: Icon }
         <motion.div 
           key={skill.name}
           variants={itemAnim}
-          className="bg-white dark:bg-slate-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all"
+          className="bg-white dark:bg-dark-surface p-5 rounded-xl border border-gray-100 dark:border-dark-border hover:shadow-md transition-all"
         >
           <div className="flex justify-between items-center mb-3">
             <span className="font-semibold text-gray-800 dark:text-gray-200">{skill.name}</span>
             <span className="text-xs font-bold text-primary-600 bg-primary-50 dark:bg-primary-900/20 px-2 py-1 rounded">{skill.level}%</span>
           </div>
-          <div className="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2 overflow-hidden">
+          <div className="w-full bg-gray-200 dark:bg-dark-card rounded-full h-2 overflow-hidden">
             <motion.div 
               initial={{ width: 0 }}
               whileInView={{ width: `${skill.level}%` }}
@@ -64,13 +64,13 @@ export default function Skills() {
         <meta name="description" content="Comprehensive overview of technical expertise including Frontend, Backend, DevOps, and Soft Skills." />
       </Helmet>
 
-      <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
+      <div className="bg-gray-50 dark:bg-dark-bg min-h-screen">
         
         {/* 1. Skills Overview Section */}
-        <section className="pt-16 pb-12 bg-white dark:bg-slate-900">
+        <section className="pt-16 pb-12 bg-white dark:bg-dark-bg">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Technical Arsenal</h1>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               I believe in choosing the right tool for the job. Here is a breakdown of the technologies and methodologies I have mastered over the years.
             </p>
           </div>
@@ -105,14 +105,14 @@ export default function Skills() {
         </section>
 
         {/* 10. Tools & Software Section */}
-        <section className="py-16 bg-white dark:bg-slate-900">
+        <section className="py-16 bg-white dark:bg-dark-bg">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center flex items-center justify-center gap-2">
               <PenTool /> Tools of the Trade
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                {getSkills('Tools').map((tool, i) => (
-                 <div key={i} className="flex flex-col items-center justify-center p-6 bg-gray-50 dark:bg-slate-800 rounded-xl hover:shadow-lg transition-all hover:-translate-y-1 cursor-default border border-gray-100 dark:border-gray-700">
+                 <div key={i} className="flex flex-col items-center justify-center p-6 bg-gray-50 dark:bg-dark-surface rounded-xl hover:shadow-lg transition-all hover:-translate-y-1 cursor-default border border-gray-100 dark:border-dark-border">
                    <div className="text-gray-900 dark:text-white font-bold">{tool.name}</div>
                    <div className="text-xs text-primary-600 mt-1">Expert</div>
                  </div>
@@ -126,7 +126,7 @@ export default function Skills() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center">Soft Skills</h2>
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
             {["Problem Solving", "Communication", "Team Leadership", "Agile Methodology", "Time Management", "Critical Thinking", "Mentoring", "Adaptability"].map((s, i) => (
-              <span key={i} className="px-6 py-3 bg-white dark:bg-slate-800 text-gray-700 dark:text-gray-300 rounded-full shadow-sm border border-gray-200 dark:border-gray-700 font-medium hover:border-primary-500 hover:text-primary-500 transition-colors cursor-default">
+              <span key={i} className="px-6 py-3 bg-white dark:bg-dark-surface text-gray-700 dark:text-gray-300 rounded-full shadow-sm border border-gray-200 dark:border-dark-border font-medium hover:border-primary-500 hover:text-primary-500 transition-colors cursor-default">
                 {s}
               </span>
             ))}
@@ -136,7 +136,7 @@ export default function Skills() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 container mx-auto px-4 pb-20">
             
             {/* 11. Certifications Section */}
-            <div className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-gray-100 dark:border-gray-800">
+            <div className="bg-white dark:bg-dark-bg p-8 rounded-2xl border border-gray-100 dark:border-dark-border">
                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                  <Award className="text-yellow-500" /> Certifications
                </h2>
@@ -146,7 +146,7 @@ export default function Skills() {
                      <div className="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0"></div>
                      <div>
                        <h4 className="font-bold text-gray-900 dark:text-white">{cert.name}</h4>
-                       <p className="text-sm text-gray-500 dark:text-gray-400">{cert.issuer} • {cert.date}</p>
+                       <p className="text-sm text-gray-500 dark:text-gray-300">{cert.issuer} • {cert.date}</p>
                      </div>
                    </div>
                  ))}
@@ -176,17 +176,17 @@ export default function Skills() {
         </div>
 
         {/* 12. Learning Journey (Visual representation) & 13. Skills Comparison */}
-        <section className="py-16 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-800">
+        <section className="py-16 bg-white dark:bg-dark-bg border-t border-gray-100 dark:border-dark-border">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center">Proficiency Breakdown</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
               {/* Learning Timeline */}
-              <div className="md:col-span-1 bg-white dark:bg-slate-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700">
+              <div className="md:col-span-1 bg-white dark:bg-dark-surface p-6 rounded-2xl border border-gray-100 dark:border-dark-border">
               <h3 className="text-xl font-bold mb-4">Learning Journey</h3>
               <p className="text-sm text-gray-500 mb-6">Milestones & what I focused on during each phase.</p>
 
               <div className="relative pl-6">
-                <div className="absolute left-3 top-2 bottom-2 w-[2px] bg-gray-200 dark:bg-slate-700"></div>
+                <div className="absolute left-3 top-2 bottom-2 w-[2px] bg-gray-200 dark:bg-dark-card"></div>
 
                 {[
                 { year: '2024', title: 'Advanced React Patterns', desc: 'Hooks, Suspense, performance tuning and state machines', icon: Code2 },
@@ -197,7 +197,7 @@ export default function Skills() {
                 const Icon = stop.icon as React.ElementType;
                 return (
                   <div key={i} className="relative mb-6">
-                  <div className="absolute -left-1.5 top-0 bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 w-6 h-6 rounded-full flex items-center justify-center">
+                  <div className="absolute -left-1.5 top-0 bg-white dark:bg-dark-surface border border-gray-100 dark:border-dark-border w-6 h-6 rounded-full flex items-center justify-center">
                     <Icon size={14} className="text-primary-600" />
                   </div>
                   <div className="pl-6">
@@ -214,7 +214,7 @@ export default function Skills() {
               </div>
 
               {/* Visual Focus (circles for current learning) */}
-              <div className="md:col-span-1 bg-white dark:bg-slate-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700 flex flex-col items-center">
+              <div className="md:col-span-1 bg-white dark:bg-dark-surface p-6 rounded-2xl border border-gray-100 dark:border-dark-border flex flex-col items-center">
               <h3 className="text-xl font-bold mb-4">Current Focus</h3>
               <p className="text-sm text-gray-500 mb-6 text-center">Where I invest most of my learning time right now.</p>
 
@@ -232,7 +232,7 @@ export default function Skills() {
                     background: `conic-gradient(${s.color} ${s.pct}%, rgba(0,0,0,0.06) ${s.pct}% 100%)`
                   }}
                   >
-                  <div className="w-16 h-16 rounded-full bg-white dark:bg-slate-900 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-white dark:bg-dark-bg flex items-center justify-center">
                     <span className="text-sm font-bold" style={{ color: s.color }}>{s.pct}%</span>
                   </div>
                   </div>
@@ -245,7 +245,7 @@ export default function Skills() {
               </div>
 
               {/* Skills Comparison Bars */}
-              <div className="md:col-span-1 bg-white dark:bg-slate-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700">
+              <div className="md:col-span-1 bg-white dark:bg-dark-surface p-6 rounded-2xl border border-gray-100 dark:border-dark-border">
               <h3 className="text-xl font-bold mb-4">Skills Comparison</h3>
               <p className="text-sm text-gray-500 mb-6">Relative proficiency across different stacks.</p>
 
@@ -261,7 +261,7 @@ export default function Skills() {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-200">{s.name}</span>
                   <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">{s.pct}%</span>
                 </div>
-                <div className="w-full bg-gray-100 dark:bg-slate-700 rounded-full h-3 overflow-hidden">
+                <div className="w-full bg-gray-100 dark:bg-dark-card rounded-full h-3 overflow-hidden">
                   <div
                   className={`${s.color} h-3 rounded-full shadow-sm`}
                   style={{ width: `${s.pct}%` }}
