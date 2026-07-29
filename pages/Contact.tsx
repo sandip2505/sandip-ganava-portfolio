@@ -124,7 +124,6 @@ export default function Contact() {
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
                     <input
-                      id="name"
                       {...register("name", { required: "Name is required" })}
                       type="text"
                       className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-dark-surface border border-gray-200 dark:border-dark-border focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
@@ -135,7 +134,6 @@ export default function Contact() {
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
                     <input
-                      id="email"
                       {...register("email", { 
                         required: "Email is required",
                         pattern: { value: /^\S+@\S+$/i, message: "Invalid email address" }
@@ -152,7 +150,6 @@ export default function Contact() {
                   <div className="space-y-2">
                     <label htmlFor="service" className="text-sm font-medium text-gray-700 dark:text-gray-300">Service</label>
                     <select
-                      id="service"
                       {...register("service", { required: "Please select a service" })}
                       className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-dark-surface border border-gray-200 dark:border-dark-border focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all appearance-none"
                     >
@@ -167,7 +164,6 @@ export default function Contact() {
                   <div className="space-y-2">
                     <label htmlFor="budget" className="text-sm font-medium text-gray-700 dark:text-gray-300">Budget Range</label>
                     <select
-                      id="budget"
                       {...register("budget")}
                       className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-dark-surface border border-gray-200 dark:border-dark-border focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all appearance-none"
                     >
@@ -182,7 +178,6 @@ export default function Contact() {
                 <div className="space-y-2 mb-8">
                   <label htmlFor="message" className="text-sm font-medium text-gray-700 dark:text-gray-300">Project Description</label>
                   <textarea
-                    id="message"
                     {...register("message", { required: "Message is required", minLength: { value: 20, message: "Please describe your project in at least 20 chars" } })}
                     rows={5}
                     className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-dark-surface border border-gray-200 dark:border-dark-border focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all resize-none"

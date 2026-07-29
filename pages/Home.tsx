@@ -80,7 +80,7 @@ export default function Home() {
             >
               <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full blur-2xl opacity-50 animate-pulse"></div>
-                <img fetchpriority="high"
+                <img loading="lazy"
                   src="https://image2url.com/images/1766049935607-5f73a5bf-5161-4c58-bba3-5995eb4d71a6.jpg"
                   alt="Sandip Ganava"
                   className="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-dark-border shadow-2xl z-10"
