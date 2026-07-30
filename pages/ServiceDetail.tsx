@@ -139,7 +139,7 @@ export default function ServiceDetail() {
             </div>
 
             {/* Sidebar (Right Column) */}
-            <div className="space-y-8">
+            <div className="space-y-8 lg:sticky lg:top-24 h-fit">
               
               {/* Tech Stack Card */}
               <motion.div 

@@ -1,7 +1,7 @@
 import { Project, Skill, Service, BlogPost, TimelineItem, Testimonial, Certification, FunFact, Hobby } from './types';
-import { 
-  Code2, Smartphone, Globe, Server, ShoppingCart, 
-  Zap, Coffee, Music, Camera, Book, Award, Cpu, 
+import {
+  Code2, Smartphone, Globe, Server, ShoppingCart,
+  Zap, Coffee, Music, Camera, Book, Award, Cpu,
   Terminal, Database, Layout, GitBranch, Layers, ShieldCheck, Gamepad
 } from 'lucide-react';
 
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
       "Project Organization"
     ],
     image: "https://image2url.com/images/1766049896515-73fded27-b1fe-4f76-9749-a1738604796b.jpg",
-    gallery: ["https://image2url.com/images/1766049897965-497837af-2c32-4f7f-865d-f678383c65e2.jpg", "https://image2url.com/images/1766049899367-4d267577-6ef5-4f37-a47c-c79fc77d62fa.jpg","https://image2url.com/images/1766049900359-e21b790b-241f-4a55-9230-754b50ecbdc7.jpg","https://image2url.com/images/1766049900359-e21b790b-241f-4a55-9230-754b50ecbdc7.jpg"],
+    gallery: ["https://image2url.com/images/1766049897965-497837af-2c32-4f7f-865d-f678383c65e2.jpg", "https://image2url.com/images/1766049899367-4d267577-6ef5-4f37-a47c-c79fc77d62fa.jpg", "https://image2url.com/images/1766049900359-e21b790b-241f-4a55-9230-754b50ecbdc7.jpg", "https://image2url.com/images/1766049900359-e21b790b-241f-4a55-9230-754b50ecbdc7.jpg"],
     challenges: [
       { title: "Prompt Engineering", description: "Fine-tuning system prompts to ensure consistent, high-quality output across different templates." },
       { title: "Rate Limiting", description: "Handling API rate limits gracefully and implementing a robust queue system for heavy loads." }
@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
     demoUrl: "#",
     githubUrl: "#"
   },
-  
+
   {
     id: "flavordash-delivery",
     title: "FlavorDash",
@@ -263,6 +263,72 @@ export const PROJECTS: Project[] = [
       "Platform hosts 50+ travel agents",
       "Automated 90% of booking workflow"
     ]
+  },
+  {
+    id: "murobath-wordpress",
+    title: "Muro Bath",
+    subtitle: "Figma to WordPress",
+    category: "WordPress",
+    description: "A pixel-perfect Figma to WordPress conversion creating a fully functional website with custom interactions.",
+    longDescription: "This project involved transforming a detailed Figma design into a highly optimized, fully functional WordPress website for Muro Bath. The focus was on ensuring pixel-perfect accuracy, responsive design across all devices, and integrating custom functionalities for a seamless user experience.",
+    techStack: ["WordPress", "Figma", "PHP", "JavaScript", "Tailwind CSS"],
+    features: [
+      "Pixel-Perfect Figma Conversion",
+      "Fully Responsive Design",
+      "Custom WordPress Theme",
+      "Optimized Performance",
+      "Advanced Custom Fields (ACF)"
+    ],
+    image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    challenges: [
+      { title: "Design Fidelity", description: "Maintaining pixel-perfect accuracy with the complex Figma layouts across varying screen sizes." }
+    ],
+    outcomes: [
+      "Successfully launched the custom theme",
+      "90+ Performance score on desktop",
+      "Fully manageable by the client"
+    ],
+    demoUrl: "https://murobath.com/",
+    githubUrl: "#"
+  },
+  {
+    id: "brickhouse-wordpress",
+    title: "Brickhouse",
+    subtitle: "Custom WordPress Development",
+    category: "WordPress",
+    description: "Complete development of a custom WordPress site from Figma designs, featuring dynamic content and robust performance.",
+    longDescription: "Brickhouse required a complex Figma to WordPress integration that brought their bespoke design to life. Built with a custom theme and fully functional backend, this project ensures easy content management while maintaining high performance and visual fidelity.",
+    techStack: ["WordPress", "Figma", "PHP", "MySQL", "ACF Pro"],
+    features: [
+      "Figma to WordPress Integration",
+      "Dynamic Content Management",
+      "Responsive UI/UX",
+      "SEO Optimized Structure",
+      "Fast Loading Speeds"
+    ],
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+      "https://brickhouse.codecrewinfotech.com/wp-content/uploads/2026/04/20240413_CAYLA_BIRTHDAY_119-1024x683.jpg",
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      "https://brickhouse.codecrewinfotech.com/wp-content/uploads/2026/04/20231122_POKOK_PUTRAJAYA_031-1024x683.jpg"
+    ],
+    challenges: [
+      { title: "Dynamic Content", description: "Structuring custom post types and fields to allow the client complete control over menu and event listings." }
+    ],
+    outcomes: [
+      "Significant increase in site engagement",
+      "Streamlined content update process",
+      "Responsive pixel-perfect UI"
+    ],
+    demoUrl: "https://brickhouse.my/",
+    githubUrl: "#"
   }
 ];
 
@@ -277,34 +343,34 @@ export const SKILLS: Skill[] = [
   { name: "Tailwind CSS", level: 98, category: "Frontend" },
   { name: "HTML5/CSS3", level: 98, category: "Frontend" },
   { name: "Redux / Context", level: 90, category: "Frontend" },
-  
+
   // Backend
   { name: "Node.js", level: 90, category: "Backend" },
   { name: "Express.js", level: 90, category: "Backend" },
   { name: "REST APIs", level: 92, category: "Backend" },
   { name: "JWT/OAuth", level: 85, category: "Backend" },
-  
+
   // Mobile
   { name: "React Native", level: 90, category: "Mobile" },
   { name: "Expo", level: 88, category: "Mobile" },
-  
+
   // WordPress
   { name: "Custom Themes", level: 95, category: "WordPress" },
   { name: "Plugin Dev", level: 90, category: "WordPress" },
   { name: "WooCommerce", level: 88, category: "WordPress" },
   { name: "PHP", level: 85, category: "WordPress" },
-  
+
   // Database
   { name: "MongoDB", level: 90, category: "Database" },
   { name: "MySQL", level: 85, category: "Database" },
   { name: "Firebase", level: 80, category: "Database" },
-  
+
   // DevOps
   { name: "Git/GitHub", level: 95, category: "DevOps" },
   { name: "CI/CD", level: 80, category: "DevOps" },
   { name: "Vercel/Netlify", level: 90, category: "DevOps" },
   { name: "cPanel", level: 88, category: "DevOps" },
-  
+
   // Tools
   { name: "VS Code", level: 100, category: "Tools" },
   { name: "Postman", level: 95, category: "Tools" },
@@ -475,7 +541,7 @@ export const TIMELINE: TimelineItem[] = [
     year: "2023 - 2026",
     title: "B.E in Information Technology",
     company: "Monark University",
-    description: "Pursuing Bachelor's degree with a focus on Full Stack Development and Cloud Computing.",
+    description: "Completed Bachelor's degree with a focus on Full Stack Development and Cloud Computing.",
     type: 'education'
   }
 ];

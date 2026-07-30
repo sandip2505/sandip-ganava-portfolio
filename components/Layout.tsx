@@ -3,7 +3,7 @@ import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { Menu, X, Sun, Moon, Github, Linkedin, Twitter, Mail, ArrowUp, Send, Heart } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { SOCIAL_LINKS } from '../constants';
+import { SOCIAL_LINKS, SERVICES } from '../constants';
 
 const NavLinks = [
   { name: 'Home', path: '/' },
@@ -246,9 +246,14 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-gray-900 dark:text-white mb-6">Services</h4>
             <ul className="space-y-3 text-sm">
-              {['Web Development', 'Mobile Apps', 'WordPress', 'E-commerce', 'API Integration'].map((item) => (
-                <li key={item} className="text-gray-600 dark:text-gray-300">
-                  {item}
+              {SERVICES.slice(0, 5).map((service) => (
+                <li key={service.id}>
+                  <NavLink
+                    to={`/services/${service.id}`}
+                    className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors inline-block hover:translate-x-1 duration-200"
+                  >
+                    {service.title}
+                  </NavLink>
                 </li>
               ))}
             </ul>
